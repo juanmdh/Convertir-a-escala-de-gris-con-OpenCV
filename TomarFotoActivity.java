@@ -1,4 +1,16 @@
-package com.dermaapp.juanjosue;
+/*
+
+Intento convertir la imagen con OpenCV, pero no me convierte cuando la imagen es tomada por la cámara del celular, 
+pero si jalo la imagen desde la galeria si me convierte , me e dado cuenta de que si se convertiría si la imagen esta en la SD,
+pero si el celular no tiene SD, de que forma podría hacerlo (la conversión a agris).
+
+
+CODIGO DEL OPENCV esta en : public  void guardarImagenTratada(View view) 
+
+Ruta de la imagen de la galeria que sise convierte; debajo esta la de la camara:  
+public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) 
+
+*/
 
 import android.Manifest;
 import android.app.Activity;
