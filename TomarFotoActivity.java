@@ -5,7 +5,7 @@ pero si jalo la imagen desde la galeria si me convierte , me e dado cuenta de qu
 pero si el celular no tiene SD, de que forma podría hacerlo (la conversión a agris).
 
 
-CODIGO DEL OPENCV esta en : public  void guardarImagenTratada(View view) 
+CODIGO DEL OPENCV esta en : public  void ConvertiraGris(View view) 
 
 Ruta de la imagen de la galeria que sise convierte; debajo esta la de la camara:  
 public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) 
@@ -270,7 +270,7 @@ public class TomarFotoActivity  extends AppCompatActivity {
         startActivityForResult(intent,REQUEST_IMAGE_GALLERY);
     }
 
-    public  void guardarImagenTratada(View view) {
+    public  void ConvertiraGris(View view) {
 //        ColorMatrix matrix = new ColorMatrix();
 //        matrix.setSaturation(0);
 //        ColorMatrixColorFilter filter = new ColorMatrixColorFilter(matrix);
@@ -294,25 +294,6 @@ public class TomarFotoActivity  extends AppCompatActivity {
     }
 
 
-    //METODO: Explicacion
-    public  void Interrogante (View view){
-        LayoutInflater inflater = getLayoutInflater();
-        View layout = inflater.inflate(R.layout.activity_mini_mensaje,(ViewGroup) findViewById(R.id.miniContenedor));
-        TextView text=(TextView)layout.findViewById(R.id.tvMensaje);text.setText("Pulse la imagen de la camara para abrir el menu de opciones");
-        Toast toast = new  Toast( getApplicationContext());
-        //toast.setGravity(Gravity.CENTER_HORIZONTAL, 0,0);
-        toast.setDuration(Toast.LENGTH_LONG);
-        toast.setView(layout);
-        toast.show();
-    }
-    //METODO: Atras
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK);
-        Intent atraslogeorecuperar= new Intent(this,MenuUsuarioActivity.class);
-        //Pasa el dato al SplashActivityExplicacionModificar
-        atraslogeorecuperar.putExtra("datoparaelmenu",txtcorreo.getText().toString());
-        startActivity(atraslogeorecuperar);
-        return false;
-    }
+
 
 }
